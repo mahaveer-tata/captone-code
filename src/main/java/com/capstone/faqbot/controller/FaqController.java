@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/ask")
+
 public class FaqController {
     private final RagService ragService;
 

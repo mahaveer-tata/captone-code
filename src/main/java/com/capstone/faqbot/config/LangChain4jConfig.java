@@ -14,20 +14,30 @@ public class LangChain4jConfig {
     private String openAiApiKey;
 
     @Bean
-    public OpenAiChatModel openAiChatModel() {
-        return OpenAiChatModel.builder()
-                .apiKey(openAiApiKey)
-                .modelName("gpt-4o-mini")
-                .temperature(0.2)
-                .build();
+    public OpenAiChatModel openAiChatModel() throws Exception {
+        try{
+            return OpenAiChatModel.builder()
+                    .apiKey(openAiApiKey)
+                    .modelName("gpt-4o-mini")
+                    .temperature(0.2)
+                    .build();
+        }catch (Exception ex){
+            throw new RuntimeException("Invalid api key");
+        }
+
     }
 
     @Bean
     public EmbeddingModel embeddingModel() {
-        return OpenAiEmbeddingModel.builder()
-                .apiKey(openAiApiKey)
-                .modelName("text-embedding-3-small")
-                .build();
+        try{
+            return OpenAiEmbeddingModel.builder()
+                    .apiKey(openAiApiKey)
+                    .modelName("text-embedding-3-small")
+                    .build();
+
+        } catch (Exception e) {
+            throw new RuntimeException("Invalid api key");
+        }
     }
 
     public String getOpenAiApiKey() {
