@@ -1,5 +1,4 @@
 name: CI/CD Pipeline for Spring Boot
-
 on:
   push:
     branches: [ "master" ]
