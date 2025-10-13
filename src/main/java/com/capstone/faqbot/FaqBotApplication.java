@@ -9,5 +9,4 @@ public class FaqBotApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(FaqBotApplication.class, args);
 	}
-
 }
