@@ -31,7 +31,8 @@ public class DocumentController {
 
         if (file.getOriginalFilename().endsWith(".pdf")) {
             content = extractTextFromPdf(file);
-        } else {
+        }
+        else {
             content = new String(file.getBytes());
         }
 
