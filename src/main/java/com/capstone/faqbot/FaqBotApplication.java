@@ -10,3 +10,4 @@ public class FaqBotApplication {
 		SpringApplication.run(FaqBotApplication.class, args);
 	}
 }
+
