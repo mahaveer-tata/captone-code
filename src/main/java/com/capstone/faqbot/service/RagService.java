@@ -82,7 +82,6 @@ public class RagService {
         history.setAnswer(String.join("\n", answerLines));
         history.setCreatedAt(LocalDateTime.now());
         repo.save(history);
-
         return new AnswerResponse(question, answerLines);
     }
 }
