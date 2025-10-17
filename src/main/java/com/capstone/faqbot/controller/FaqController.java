@@ -21,6 +21,8 @@ public class FaqController {
     @PostMapping
     public AnswerResponse askQuestion(@RequestBody QuestionRequest questionRequest) {
         return ragService.answerResponse(questionRequest);
+
+        //comment
     }
 }
 
